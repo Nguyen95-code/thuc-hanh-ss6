@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>DoF</label>;
+        <input id="doF" type="number" placeholder="F"
+        oninput="temperatureCoverter(this.value)" onchange="temperatureCoverter(this.value)">
+    </p>
+    <p>DoC: <span id="outputDoC"></span></p>
+</form>
+<script>
+    function temperatureCoverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputDoC").innerHTML = (valNum -32)/1.8;
+    }
+</script>
+</body>
+</html>
